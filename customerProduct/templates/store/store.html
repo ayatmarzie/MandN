@@ -1,0 +1,57 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+	<div class="row">
+		{%for product in all%}
+			<div class="col-lg-4">
+				<img class="thumbnail" src="{% static 'images/placeholder.png' %}">
+				<div class="box-element product">
+					<h6 style="display: inline-block; float: left"><strong>{{product.name}}</strong></h6>
+
+					<h6 style="display: inline-block; float: right"><strong>{{product.category}}</strong></h6>
+					<br/>
+					<hr>
+
+
+				<button  class="btn btn-outline-secondary add-btn">اضافه کردن به سبد خرید</button>
+				<a class="btn btn-outline-success" href="#">نمایش</a>
+				<h4 style="display: inline-block; float: right"><strong>${{product.price}}</strong></h4>
+
+			</div>
+		</div>
+		{%endfor%}
+
+		<div class="col-lg-4">
+			<img class="thumbnail" src="{% static 'images/placeholder.png' %}">
+			<div class="box-element product">
+				<h6 style="display: inline-block; float: left"><strong> EV-1</strong></h6>
+
+					<h6 style="display: inline-block; float: right"><strong>Saab</strong></h6>
+					<br/>
+					<hr>
+
+				<button  class="btn btn-outline-secondary add-btn">اضافه کردن به سبد خرید</button>
+				<a class="btn btn-outline-success" href="#">نمایش</a>
+				<h4 style="display: inline-block; float: right"><strong>$90</strong></h4>
+
+			</div>
+		</div>
+
+		<div class="col-lg-4">
+			<img class="thumbnail" src="{% static 'images/placeholder.png' %}">
+			<div class="box-element product">
+				<h6 style="display: inline-block; float: left"><strong>XC90</strong></h6>
+
+					<h6 style="display: inline-block; float: right"><strong>Volvo</strong></h6>
+					<br/>
+					<hr>
+
+				<button  class="btn btn-outline-secondary add-btn">اضافه کردن به سبد خرید</button>
+				<a class="btn btn-outline-success" href="#">نمایش</a>
+				<h4 style="display: inline-block; float: right"><strong>$93.99</strong></h4>
+
+			</div>
+		</div>
+	</div>
+
+{% endblock content %}

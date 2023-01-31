@@ -1,0 +1,41 @@
+{% extends 'store/main.html' %}
+
+
+{% block title %} محصولات {% endblock %}
+{% block content %}
+	<h1 dir="rtl">اطلاعات محصول را وارد کنید</h1>
+
+	
+	<form method="post">
+		{% csrf_token %}
+	  <label for="prodname">نام محصول:</label><br>
+	  <input type="text" id="prodname" name="prodname"><br>
+	
+
+		<label for="cars">گروه:</label><br>
+			<select id="cars" name="cars">
+  			<option value="volvo">Volvo</option>
+  			<option value="saab">Saab</option>
+  			<option value="fiat">Fiat</option>
+  			<option value="audi">Audi</option>
+		</select><br>
+
+
+
+	  <label for="price">قیمت: </label><br>
+	  <input type="number" id="price" name="price"><br>
+
+	  <label for="features">ویژگی های محصول:</label><br>
+	  <input type="text" id="features" name="features"><br>
+
+	  <label for="details">توضیحات محصول:</label><br>
+	  <input type="tel" id="details" name="details"><br>
+
+	  <input type="reset" value="پاک کردن"
+                style="background-color: red;
+                        color: white" />
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+
+{% endblock %}

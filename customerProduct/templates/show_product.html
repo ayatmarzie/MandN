@@ -1,0 +1,34 @@
+{% extends 'store/main.html' %}
+
+
+{% block title %} اطلاعات محصولات {% endblock %}
+{% block content %}
+
+    <h2 align="center">اطلاعات محصولات</h2>
+
+
+    <table style="width:100%">
+
+        <tr>
+            <th bgcolor="red">نام محصول</th>
+            <th bgcolor="green">گروه</th>
+            <th bgcolor="blue">قیمت</th>
+            <th bgcolor="orange">ویژگی ها</th>
+            <th bgcolor="lime">توضیحات</th>
+
+        </tr>
+        {%for product in all%}
+        <tr>
+            <th>{{product.name}}</th>
+            <th>{{product.category}}</th>
+            <th>{{product.price}}</th>
+            <th>{{product.features}}</th>
+            <th>{{product.description}}</th>
+
+        </tr>
+        {%endfor%}
+    </table>
+
+
+{% endblock %}
+

@@ -1,0 +1,37 @@
+{% extends 'store/main.html' %}
+
+
+{% block title %} اطلاعات مشتری {% endblock %}
+{% block content %}
+
+
+
+    <h2 align="center">خانه</h2>
+
+    <table style="width:100%">
+
+        <tr>
+            <th bgcolor="red">نام</th>
+            <th bgcolor="green">نام خانوادگی</th>
+            <th bgcolor="blue">آدرس</th>
+            <th bgcolor="orange">تاریخ تولد</th>
+
+        </tr>
+        {%for customer in all%}
+        <tr>
+            <th>{{customer.fname}}</th>
+            <th>{{customer.lname}}</th>
+            <th>{{customer.addr}}</th>
+            <th>{{customer.birthdate}}</th>
+
+        </tr>
+        {%endfor%}
+    </table>
+
+
+
+
+{% endblock %}
+
+
+

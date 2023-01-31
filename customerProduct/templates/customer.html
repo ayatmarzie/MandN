@@ -1,0 +1,35 @@
+{% extends 'store/main.html' %}
+
+
+
+{% block title %} مشتریان {% endblock %}
+
+{% block content %}
+	<h1 dir="rtl">اطلاعات مشتری را وارد کنید</h1>
+
+
+	<form method="post">
+		{% csrf_token %}
+	  <label for="fname">نام:</label><br>
+	  <input type="text" id="fname" name="fname"><br>
+	  <label for="lname">نام خانوادگی:</label><br>
+	  <input type="text" id="lname" name="lname"><br>
+
+	  <label for="birthdate">تاریخ تولد:</label><br>
+	  <input type="date" id="birthdate" name="birthdate"><br>
+
+	  <label for="addr">آدرس:</label><br>
+	  <input type="text" id="addr" name="addr"><br>
+
+	  <label for="tel">شماره تماس:</label><br>
+	  <input type="number" id="tel" name="tel"><br>
+
+	  <input type="reset" value="پاک کردن"
+                style="background-color: red;
+                        color: white" />
+		<button type="submit" class="btn btn-primary" style="background-color: green;
+                        color: white"> ثبت</button>
+	</form>
+
+
+{% endblock %}
